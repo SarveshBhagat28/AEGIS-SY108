@@ -20,12 +20,35 @@ st.info(
     "An anomaly is not proof of malicious behaviour."
 )
 
-st.sidebar.header("CERT Dataset Uploads")
-logon_file = st.sidebar.file_uploader("logon.csv", type=["csv"])
-device_file = st.sidebar.file_uploader("device.csv", type=["csv"])
-users_file = st.sidebar.file_uploader("users.csv", type=["csv"])
+
+logon_file = st.sidebar.file_uploader(
+    "logon.csv — maximum 800 MB",
+    type=["csv"],
+    max_upload_size=800
+)
+
+device_file = st.sidebar.file_uploader(
+    "device.csv — maximum 800 MB",
+    type=["csv"],
+    max_upload_size=800
+)
+
+users_file = st.sidebar.file_uploader(
+    "users.csv — maximum 800 MB",
+    type=["csv"],
+    max_upload_size=800
+)
+
 file_file = st.sidebar.file_uploader(
-    "Filtered file.csv (optional)", type=["csv"]
+    "file.csv — maximum 2 GB",
+    type=["csv"],
+    max_upload_size=2000
+)
+
+psych_file = st.sidebar.file_uploader(
+    "psychometric.csv — maximum 800 MB",
+    type=["csv"],
+    max_upload_size=800
 )
 
 st.sidebar.caption(
