@@ -1,0 +1,23 @@
+.venv/
+.venv-train/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# CERT datasets and generated CSV files
+data/*.csv
+data/*.tar.bz2
+data/answers/*.csv
+
+# Generated reports and temporary files
+*.log
+
+# Generated testing outputs
+testing/reports/*.csv
+testing/synthetic/*.csv
